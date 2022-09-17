@@ -1,0 +1,9 @@
+export const LANDING = '/';
+export const SIGN_UP = '/signup';
+export const PRODUCTS = '/products';
+export const HOME = '/home';
+export const MARKETING = '/marketing';
+export const DEVELOPMENT= '/development';
+export const DESIGN = '/design';
+export const CONTACT_US = '/contactus';
+export const CONSULTING = '/consulting';
