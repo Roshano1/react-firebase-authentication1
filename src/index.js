@@ -1,13 +1,37 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './components/App/index';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter,Route, Routes } from 'react-router-dom';
+
+import * as ROUTES from './constants/routes';
+import  Navigation  from './components/Navigation';
+import ConsultingPage from './components/Consulting';
+import ContactUsPage from './components/ContactUs';
+import DesignPage from './components/Design';
+import DevelopmentPage from './components/Development';
+import HomePage from './components/Home';
+import MarketingPage from './components/Marketing';
+import SignUpPage from './components/SignUp';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+       <Navigation />
+     
+       <hr/>
+    {/* <Routes>
+       <Route exact path={ROUTES.CONSULTING} component={ConsultingPage}/>
+       <Route path={ROUTES.CONTACT_US} component={ContactUsPage}/>
+       <Route path={ROUTES.DESIGN} component={DesignPage}/>
+       <Route path={ROUTES.DEVELOPMENT} component={DevelopmentPage}/>
+       <Route path={ROUTES.HOME} component={HomePage}/>
+       <Route path={ROUTES.MARKETING} component={MarketingPage}/>
+       <Route path={ROUTES.SIGN_UP} component={SignUpPage}/>
+     </Routes>*/}   
+   </BrowserRouter>
   </React.StrictMode>
 );
 
